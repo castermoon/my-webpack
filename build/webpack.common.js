@@ -3,24 +3,19 @@ const webpack = require("webpack")
 const AddAssetHtmlWebpackPlugin = require("add-asset-html-webpack-plugin")
 const path = require("path")
 const commonConfig = {
-	entry: "./src/index.js",
+	entry: "./src/test.tsx",
 	resolve:{
-		extensions:[".js","jsx"]
+		extensions:[".js","jsx","ts","tsx"]
 	},
 	module: {
 		rules: [{
 			exclude: [/^$/, /\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
 			type: 'asset/resource',
 		},{
-			test: /\.js$/i,
+			test: /\.(js|jsx|ts|tsx)$/i,
 			exclude: /node_modules/,
 			use: {
 				loader: "babel-loader"
-			}
-		},{
-			test: /\.(ts|tsx)$/i,
-			use: {
-				loader: "ts-loader"
 			}
 		}]
 	},
