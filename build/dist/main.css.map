@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AAAA","sources":["webpack://my-webpack/./src/index.styl"],"sourcesContent":[".index\r\n  color red\r\n\r\n\r\n.index2\r\n  color blue\r\n\r\n.index3\r\n  color blue\r\n  background red\r\n  font-size 15px\r\n"],"names":[],"sourceRoot":""}
